@@ -38,6 +38,7 @@ repositories {
 dependencies {
     // 스프링부트 main에서 사용하는 컴파일
     compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.projectlombok:lombok')
     // 스프링부트 test에서 사용하는 컴파일
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
