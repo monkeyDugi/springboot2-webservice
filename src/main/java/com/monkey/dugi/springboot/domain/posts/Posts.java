@@ -1,5 +1,6 @@
 package com.monkey.dugi.springboot.domain.posts;
 
+import com.fasterxml.jackson.databind.ser.Serializers;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,7 +15,7 @@ import javax.persistence.Id;
 @NoArgsConstructor // 1. 기본생성자 자동 추가 => public Posts() {}
 @Entity // 1. 테이블과 매핑될 클래스르 나타냄
         // 2. 클래스명의 카멜케이스와 테이블명 언더스코어 네이밍으로 매핑
-public class Posts {
+public class Posts extends BaseTimeEntity {
 
     // 1. 해당 테이블의 PK
     // 2. 참고
