@@ -54,6 +54,10 @@ public class PostsApiControllerTest {
         String url = "http://localhost:" + port + "/api/v1/posts";
 
         //when
+        // 1. HttpEntity라는 클래스를 상속받은 클래스이다.
+        // 2. HttpEntity는 Http 프로토콜 통신의 header, body정보를 저장할 수 있다.
+        // 3. ResponseEntity는 response(응답)일 경우 사용되는 것 이다.
+        // * RequestEntity : request(요청)일 경우 사용
         ResponseEntity<Long> responseEntity = restTemplate.postForEntity(url, requestDto, Long.class);
 
         //then
