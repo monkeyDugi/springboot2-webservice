@@ -17,7 +17,7 @@
 - [쿼리로그 보기 설정](https://github.com/monkeyDugi/springboot2-webservice#--%EC%BF%BC%EB%A6%AC%EB%A1%9C%EA%B7%B8-%EB%B3%B4%EA%B8%B0-%EC%84%A4%EC%A0%95)
 
 ### - [등록/수정/조회 API 만들기](https://github.com/monkeyDugi/springboot2-webservice#%EB%93%B1%EB%A1%9D%EC%88%98%EC%A0%95%EC%A1%B0%ED%9A%8C-api-%EB%A7%8C%EB%93%A4%EA%B8%B0)
-- [API를 만들기 위해서는 총 3개의 클래스가 필요하다](https://github.com/monkeyDugi/springboot2-webservice#--api%EB%A5%BC-%EB%A7%8C%EB%93%A4%EA%B8%B0-%EC%9C%84%ED%95%B4%EC%84%9C%EB%8A%94-%EC%B4%9D-3%EA%B0%9C%EC%9D%98-%ED%81%B4%EB%9E%98%EC%8A%A4%EA%B0%80-%ED%95%84%EC%9A%94%ED%95%98%EB%8B%A4page101\)
+- [API를 만들기 위해서는 총 3개의 클래스가 필요하다](https://github.com/monkeyDugi/springboot2-webservice#--api%EB%A5%BC-%EB%A7%8C%EB%93%A4%EA%B8%B0-%EC%9C%84%ED%95%B4%EC%84%9C%EB%8A%94-%EC%B4%9D-3%EA%B0%9C%EC%9D%98-%ED%81%B4%EB%9E%98%EC%8A%A4%EA%B0%80-%ED%95%84%EC%9A%94%ED%95%98%EB%8B%A4page101)
 - [로직 처리는 어디서 할까?](https://github.com/monkeyDugi/springboot2-webservice#--%EB%A1%9C%EC%A7%81-%EC%B2%98%EB%A6%AC%EB%8A%94-%EC%96%B4%EB%94%94%EC%84%9C-%ED%95%A0%EA%B9%8Cpage101)
 - [Dto와 Entity 클래스](https://github.com/monkeyDugi/springboot2-webservice#--dto%EC%99%80-entity-%ED%81%B4%EB%9E%98%EC%8A%A4page108)
 
