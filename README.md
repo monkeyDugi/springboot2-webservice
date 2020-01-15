@@ -6,27 +6,27 @@
 - Junit : 4.12
 
 # 정리
-### - [에러](https://github.com/monkeyDugi/monkeyDugiWiki/wiki/springboot2-webservice-webservice-%EC%9D%B4%EC%8A%88#%EC%97%90%EB%9F%AC)
-- [@RequiredArgsConstructor 에러](https://github.com/monkeyDugi/monkeyDugiWiki/wiki/springboot2-webservice-webservice-%EC%9D%B4%EC%8A%88#--requiredargsconstructor-%EC%97%90%EB%9F%AC)
+### - [에러](https://github.com/monkeyDugi/springboot2-webservice#%EC%97%90%EB%9F%AC)
+- [@RequiredArgsConstructor 에러](https://github.com/monkeyDugi/springboot2-webservice#%EC%97%90%EB%9F%AC)
 
-### - [setter는 지양한다](https://github.com/monkeyDugi/monkeyDugiWiki/wiki/springboot2-webservice-webservice-%EC%9D%B4%EC%8A%88#setter%EB%8A%94-%EC%A7%80%EC%96%91%ED%95%9C%EB%8B%A4)
-### - [생성자 보다 Builder를 지향한다](https://github.com/monkeyDugi/monkeyDugiWiki/wiki/springboot2-webservice-webservice-%EC%9D%B4%EC%8A%88#%EC%83%9D%EC%84%B1%EC%9E%90-%EB%B3%B4%EB%8B%A4-builder%EB%A5%BC-%EC%A7%80%ED%96%A5%ED%95%9C%EB%8B%A4)
+### - [setter는 지양한다](https://github.com/monkeyDugi/springboot2-webservice#setter%EB%8A%94-%EC%A7%80%EC%96%91%ED%95%9C%EB%8B%A4)
+### - [생성자 보다 Builder를 지향한다](https://github.com/monkeyDugi/springboot2-webservice#%EC%83%9D%EC%84%B1%EC%9E%90-%EB%B3%B4%EB%8B%A4-builder%EB%A5%BC-%EC%A7%80%ED%96%A5%ED%95%9C%EB%8B%A4)
 
-### - [domain패키지](https://github.com/monkeyDugi/monkeyDugiWiki/wiki/springboot2-webservice-webservice-%EC%9D%B4%EC%8A%88#domain-%ED%8C%A8%ED%82%A4%EC%A7%80)
-### - [application.properties](https://github.com/monkeyDugi/monkeyDugiWiki/wiki/springboot2-webservice-webservice-%EC%9D%B4%EC%8A%88#applicationproperties-%EC%84%A4%EC%A0%95)
-- [쿼리로그 보기 설정](https://github.com/monkeyDugi/monkeyDugiWiki/wiki/springboot2-webservice-webservice-%EC%9D%B4%EC%8A%88#applicationproperties-%EC%84%A4%EC%A0%95)
+### - [domain패키지](https://github.com/monkeyDugi/springboot2-webservice#domain-%ED%8C%A8%ED%82%A4%EC%A7%80)
+### - [application.properties](https://github.com/monkeyDugi/springboot2-webservice#applicationproperties-%EC%84%A4%EC%A0%95)
+- [쿼리로그 보기 설정](https://github.com/monkeyDugi/springboot2-webservice#--%EC%BF%BC%EB%A6%AC%EB%A1%9C%EA%B7%B8-%EB%B3%B4%EA%B8%B0-%EC%84%A4%EC%A0%95)
 
-### - [등록/수정/조회 API 만들기]()
-- [API를 만들기 위해서는 총 3개의 클래스가 필요하다]()
-- [로직 처리는 어디서 할까?]()
-- [Dto와 Entity 클래스]()
+### - [등록/수정/조회 API 만들기](https://github.com/monkeyDugi/springboot2-webservice#%EB%93%B1%EB%A1%9D%EC%88%98%EC%A0%95%EC%A1%B0%ED%9A%8C-api-%EB%A7%8C%EB%93%A4%EA%B8%B0)
+- [API를 만들기 위해서는 총 3개의 클래스가 필요하다](https://github.com/monkeyDugi/springboot2-webservice#--api%EB%A5%BC-%EB%A7%8C%EB%93%A4%EA%B8%B0-%EC%9C%84%ED%95%B4%EC%84%9C%EB%8A%94-%EC%B4%9D-3%EA%B0%9C%EC%9D%98-%ED%81%B4%EB%9E%98%EC%8A%A4%EA%B0%80-%ED%95%84%EC%9A%94%ED%95%98%EB%8B%A4page101\)
+- [로직 처리는 어디서 할까?](https://github.com/monkeyDugi/springboot2-webservice#--%EB%A1%9C%EC%A7%81-%EC%B2%98%EB%A6%AC%EB%8A%94-%EC%96%B4%EB%94%94%EC%84%9C-%ED%95%A0%EA%B9%8Cpage101)
+- [Dto와 Entity 클래스](https://github.com/monkeyDugi/springboot2-webservice#--dto%EC%99%80-entity-%ED%81%B4%EB%9E%98%EC%8A%A4page108)
 
-### - [TestRestTemplate]()
-### - [HttpEntity란]()
-### - [영속성 컨텍스트]()
-### - [IOC란]()
-### - [DI란]()
-### - [JPA Auditing으로 생성시간/수정시간 자동화 하기]()
+### - [TestRestTemplate](https://github.com/monkeyDugi/springboot2-webservice#--%EC%98%81%EC%86%8D%EC%84%B1-%EC%BB%A8%ED%85%8D%EC%8A%A4%ED%8A%B8page113)
+### - [HttpEntity란](https://github.com/monkeyDugi/springboot2-webservice#--testresttemplate%EB%9E%80)
+### - [영속성 컨텍스트](https://github.com/monkeyDugi/springboot2-webservice#--httpentity%EB%9E%80-1)
+### - [IOC란](https://github.com/monkeyDugi/springboot2-webservice#--ioc%EB%9E%80inversion-of-control-%EC%A0%9C%EC%96%B4%EC%9D%98-%EC%97%AD%EC%A0%84)
+### - [DI란](https://github.com/monkeyDugi/springboot2-webservice#--didependency-injection-%EC%9D%98%EC%A1%B4%EC%84%B1-%EC%A3%BC%EC%9E%85)
+### - [JPA Auditing으로 생성시간/수정시간 자동화 하기](https://github.com/monkeyDugi/springboot2-webservice#--jpa-auditing%EC%9C%BC%EB%A1%9C-%EC%83%9D%EC%84%B1%EC%8B%9C%EA%B0%84%EC%88%98%EC%A0%95%EC%8B%9C%EA%B0%84-%EC%9E%90%EB%8F%99%ED%99%94-%ED%95%98%EA%B8%B0-1)
 #
 
 ### 에러
