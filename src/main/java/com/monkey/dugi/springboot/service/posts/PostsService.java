@@ -2,12 +2,17 @@ package com.monkey.dugi.springboot.service.posts;
 
 import com.monkey.dugi.springboot.domain.posts.Posts;
 import com.monkey.dugi.springboot.domain.posts.PostsRepository;
+import com.monkey.dugi.springboot.web.dto.PostsListResponseDto;
 import com.monkey.dugi.springboot.web.dto.PostsResponseDto;
 import com.monkey.dugi.springboot.web.dto.PostsSaveRequestDto;
 import com.monkey.dugi.springboot.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 @Service
@@ -42,5 +47,14 @@ public class PostsService {
                 IllegalArgumentException("해당 사용자가 없습니다. id=" + id));
 
         return new PostsResponseDto(entity);
+    }
+
+    // readOnly = ture => 조회 기능만 가능하게 하여 조회 속도 개선이 된다.
+    @Transactional(readOnly = true)
+    public List<PostsListResponseDto> findAllDesc() {
+        return postsRepository.findAllDesc().stream() // 1. 결과로 넘어온 Posts의 stream을
+                .map(PostsListResponseDto::new)       // 2. map을 통해 PostListResponseDto로 변환 -> List 반환
+                                                      //    - .mpa(posts -> new PostsListResponseDto(posts))와 같음
+                .collect(Collectors.toList());
     }
 }
