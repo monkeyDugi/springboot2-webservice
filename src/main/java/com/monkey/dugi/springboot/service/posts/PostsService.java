@@ -17,6 +17,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 @Service
 public class PostsService {
+
     private final PostsRepository postsRepository;
 
     @Transactional
@@ -56,5 +57,13 @@ public class PostsService {
                 .map(PostsListResponseDto::new)       // 2. map을 통해 PostListResponseDto로 변환 -> List 반환
                                                       //    - .mpa(posts -> new PostsListResponseDto(posts))와 같음
                 .collect(Collectors.toList());
+    }
+
+    @Transactional
+    public void delete(Long id) {
+        Posts posts = postsRepository.findById(id).orElseThrow(() -> new
+                IllegalArgumentException("해당 사용자가 없습니다. id=" + id));
+
+        postsRepository.delete(posts);
     }
 }
