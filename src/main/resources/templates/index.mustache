@@ -11,6 +11,11 @@
                 {{^userName}} <!--userName이 값이 없으면 안의 내용 출력-->
                     <a href="/oauth2/authorization/google" class="btn btn-success active" role="button">Google Login</a> <!--스프링 시큐리티가 제공하는 로그인 URL-->
                 {{/userName}}
+                {{^userName}} <!--userName이 값이 없으면 안의 내용 출력-->
+                    <a href="/oauth2/authorization/naver" class="btn btn-secondary active" role="button">Naver Login</a> <!--스프링 시큐리티가 제공하는 로그인 URL
+                                                                                                                           네이버 로그인 URL은 application-oauth.properties에 등록한
+                                                                                                                           redirect_uri_template값에 맞춰 자동으로 등록 됨-->
+                {{/userName}}
             </div>
         </div>
         <br>

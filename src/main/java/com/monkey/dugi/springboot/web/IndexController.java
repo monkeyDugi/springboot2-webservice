@@ -1,5 +1,6 @@
 package com.monkey.dugi.springboot.web;
 
+import com.monkey.dugi.springboot.config.auth.LoginUser;
 import com.monkey.dugi.springboot.config.auth.dto.SessionUser;
 import com.monkey.dugi.springboot.domain.posts.User;
 import com.monkey.dugi.springboot.service.posts.PostsService;
@@ -17,14 +18,14 @@ import javax.servlet.http.HttpSession;
 public class IndexController {
 
     private final PostsService postsService;
-    private final HttpSession httpSession;
 
     @GetMapping("/")
-    public String index(Model model) {
+    public String index(Model model, @LoginUser SessionUser user) { // 기존에 (User) httpSession.getAttribute("user")로 가져오던 세션 정보값을 @LoginUser SessionUser user로 개선
         model.addAttribute("posts", postsService.findAllDesc());
 
-        SessionUser user = (SessionUser) httpSession.getAttribute("user"); // 1. CustomOAuth2UserService에서 로그인 성공 시 세션에 SessionUser를 저장하도록 했음
+        //SessionUser user = (SessionUser) httpSession.getAttribute("user"); // 1. CustomOAuth2UserService에서 로그인 성공 시 세션에 SessionUser를 저장하도록 했음
                                                                                  // 2. 즉, 로그인 성공 시 httpSession.getAttribute("user")에서 값을 가져울 수 있음
+
         if (user != null) { // 세션에 값이 있을 때만 model에 userName으로 등록
            model.addAttribute("userName", user.getName());
         }
