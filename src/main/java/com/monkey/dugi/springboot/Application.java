@@ -2,9 +2,7 @@ package com.monkey.dugi.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
-@EnableJpaAuditing // JPA Auditing 모두 활성화
 // 1. 스프링 부트 자동설정 => 스프링 Bean 읽기, 생성 자동
 // 2. 이것이 위치한 곳 부터 설정을 읽기 때문에 항상 프로젝트 최상단에 위치한다.
 @SpringBootApplication
