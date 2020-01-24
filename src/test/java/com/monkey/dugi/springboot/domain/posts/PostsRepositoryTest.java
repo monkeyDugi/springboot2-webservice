@@ -1,7 +1,5 @@
 package com.monkey.dugi.springboot.domain.posts;
 
-import javafx.geometry.Pos;
-import org.assertj.core.api.Assertions;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
