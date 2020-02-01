@@ -22,6 +22,7 @@ script: "./gradlew clean build"
 # deploy 명령어가 실행되기 전에 수행
 before_deploy:
   # CodeDeploy는 Jar 파일은 인식하지 못하므로 Jar + 기타 설정 파일들을 모아 압축(zip)
+  # 현재 위치의 모든 파일을 monkey-springboot2-webservice 이름으로 압축(zip)
   - zip -r monkey-springboot2-webservice *
   # deploy라는 디렉토리를 Travis CI가 실행 중인 위치에서 생성
   - mkdir -p deploy
