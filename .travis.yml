@@ -19,6 +19,29 @@ cache:
 # 여기서는 프로젝트 내부에 둔 gradlew을 통해 clean & build를 수행
 script: "./gradlew clean build"
 
+# deploy 명령어가 실행되기 전에 수행
+before_deploy:
+  # CodeDeploy는 Jar 파일은 인식하지 못하므로 Jar + 기타 설정 파일들을 모아 압축(zip)
+  - zip -r monkey-springboot2-webservice *
+  # deploy라는 디렉토리를 Travis CI가 실행 중인 위치에서 생성
+  - mkdir -p deploy
+  # deploy로 파일 이동
+  - mv monkey-springboot2-webservice.zip deploy/monkey-springboot2-webservice.zip
+
+# S3로 파일 업로드 혹은 CodeDeploy로 배포 등 외부 서비스와 연동될 행위들을 선언
+deploy:
+  - provider: s3
+    # Travis repo settings에 설정된 값
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: monkey-springboot2-webservice # S3 버킷
+    region: ap-northeast-2
+    skip_cleanup: true
+    acl: private # zip 파일 접근을 private으로 설정
+    local_dir: deploy # before_deploy에서 생성한 디렉토리를 지정
+                      # 해당 위치의 파일등ㄹ만 S3로 전송
+    wait-until-deployed: true
+
 #CI 실행완료 시 메일로 알람
 # Travis CI 실행 완료 시 자동으로 알림이 가도록 설정
 notifications:
