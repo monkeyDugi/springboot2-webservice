@@ -54,7 +54,7 @@ deploy:
     bundle_type: zip # 압축 확장자
     application: monkey-springboot2-webservice # 웹 콘솔에서 등록한 Codedeploy 애플리케이션
     deployment_group: monkey-springboot2-webservice-group # 웹 콘솔에서 등록한 CodeDeploy 배포 그룹
-    region: us-east-2
+    region: us-east-2 # 실수로 codedeploy 지역을 오하이오로 함
     wait-until-deployed: true
 
 #CI 실행완료 시 메일로 알람
