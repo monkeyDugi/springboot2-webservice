@@ -38,8 +38,8 @@ deploy:
     # Travis repo settings에 설정된 값
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
-    bucket: monkey-springboot2-build # S3 버킷
-    region: ap-northeast-2
+    bucket: monkey-springboot2-build1 # S3 버킷
+    region: us-east-2
     skip_cleanup: true
     acl: private # zip 파일 접근을 private으로 설정
     local_dir: deploy # before_deploy에서 생성한 디렉토리를 지정
@@ -49,7 +49,7 @@ deploy:
   - provider: codedeploy
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
-    bucket: monkey-springboot2-build # S3 버킷
+    bucket: monkey-springboot2-build1 # S3 버킷
     key: monkey-springboot2-webservice.zip # 빌드 파일을 압축해서 전달
     bundle_type: zip # 압축 확장자
     application: monkey-springboot2-webservice # 웹 콘솔에서 등록한 Codedeploy 애플리케이션
