@@ -27,6 +27,7 @@ before_deploy:
   # 현재 위치의 모든 파일을 monkey-springboot2-webservice 이름으로 압축(zip)
   - zip -r monkey-springboot2-webservice *
   # deploy라는 디렉토리를 Travis CI가 실행 중인 위치에서 생성
+  # mkdir -p : 중간 디렉토리가 존재하지 않으면 자동 생성
   - mkdir -p deploy
   # deploy로 파일 이동
   - mv monkey-springboot2-webservice.zip deploy/monkey-springboot2-webservice.zip
@@ -45,16 +46,16 @@ deploy:
                       # 해당 위치의 파일등ㄹ만 S3로 전송
     wait-until-deployed: true
 
-#  - provider: codedeploy
-#    access_key_id: $AWS_ACCESS_KEY
-#    secret_access_key: $AWS_SECRET_KEY
-#    bucket: monkey-springboot2-build # S3 버킷
-#    key: monkey-springboot2-webservice.zip # 빌드 파일을 압축해서 전달
-#    bundle_type: zip # 압축 확장자
-#    application: monkey-springboot2-webservice # 웹 콘솔에서 등록한 Codedeploy 애플리케이션
-#    deployment_group: monkey-springboot2-webservice-group # 웹 콘솔에서 등록한 CodeDeploy 배포 그룹
-#    region: ap-northeast-2
-#    wait-until-deployed: true
+  - provider: codedeploy
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: monkey-springboot2-build # S3 버킷
+    key: monkey-springboot2-webservice.zip # 빌드 파일을 압축해서 전달
+    bundle_type: zip # 압축 확장자
+    application: monkey-springboot2-webservice # 웹 콘솔에서 등록한 Codedeploy 애플리케이션
+    deployment_group: monkey-springboot2-webservice-group # 웹 콘솔에서 등록한 CodeDeploy 배포 그룹
+    region: ap-northeast-2
+    wait-until-deployed: true
 
 #CI 실행완료 시 메일로 알람
 # Travis CI 실행 완료 시 자동으로 알림이 가도록 설정
