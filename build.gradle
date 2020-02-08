@@ -23,7 +23,8 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
 group 'com.monkey.dugi'
-version '1.0-SNAPSHOT'
+//version '1.0-SNAPSHOT' // 배포 시 버전
+version '1.0.1-SNAPSHOT' // 다음 버전 배포시 이런 식으로 사용
 sourceCompatibility = 1.8
 
 // 각종 의존성 라이브러리들을 어떤 원격 저장소에서 받을지 정함.
