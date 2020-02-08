@@ -23,7 +23,9 @@ public class ProfileController {
         // - 현재 실행 중인 ActiveProfile을 모두 가져옴
         // - 즉, real, oauth, real-db 등이 활성화 되어 있다면(active) 3개가 모듀 담겨 있음.
         // - 여기서 real, real1, real2는 모두 배포에 사용될 profile이라 이 중 하나라도 있으면 그 값을 반환
-        // - 실제로 이번 무중단 배포(step3)에서는 real1과 real2만 사용되지만, step2를 다시 사용해 볼 수도 있으니 real도 남겨 둠
+        // - 실제로 이번 무중단 배포(step3)에서는 real1과 real2만 사용되지만, step2(Travis CI 배포 자동화)를 다시 사용해 볼 수도 있으니 real도 남겨 둠
+        //   - ActiveProfile : 서버에서 설정한 profile=real이며, application-real.properties파일을 말함,
+        //   - 마찬가지로 real1, real2, oauth, real-db모두 같은 의미이다.
         List<String> profiles = Arrays.asList(env.getActiveProfiles());
         List<String> realProfiles = Arrays.asList("real", "real1", "real2");
 
