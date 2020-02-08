@@ -19,7 +19,7 @@ function switch_proxy() {
     # - 홑따옴표(')를 사용해야 함, 그렇지 않으면 $service-url을 그대로 인식하지 못하고 변수를 찾게 됨
     # sudo tee /etc/nginx/conf.d/service-url.inc
     # - 앞에서 넘겨준 문장을 service_url.inc에 덮어 씀
-    echo 'set \$service_url http://127.0.0.1:${IDLE_PORT};' | sudo tee /etc/nginx/conf.d/service-url.inc
+    echo "set \$service_url http://127.0.0.1:${IDLE_PORT};" | sudo tee /etc/nginx/conf.d/service-url.inc
 
     echo "> 엔진엑스 Reload"
     # 엔진엑스 설정을 다시 불러옴
